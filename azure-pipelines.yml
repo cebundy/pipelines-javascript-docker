@@ -14,4 +14,4 @@
      repository: $(imageName)
      command: build
      Dockerfile: app/Dockerfile
- - script: ls ${SystemDefaultWorkingDirectory}
+ - script: ls ${SystemDefaultWorkingDirectory}/app
