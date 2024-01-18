@@ -5,13 +5,10 @@
 trigger:
 - main
 
-resources:
-- repo: self
+variables:
+  imageName: 'pipelines-javascript-docker'
 
- variables:
-   imageName: 'pipelines-javascript-docker'
-
- steps:
+steps:
  - task: Docker@2
    displayName: Build an image
    inputs:
