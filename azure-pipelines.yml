@@ -5,6 +5,10 @@
 trigger:
 - main
 
+pool:
+  name: default
+  demand: CB
+
 variables:
   imageName: 'pipelines-javascript-docker'
 
