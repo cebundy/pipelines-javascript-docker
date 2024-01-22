@@ -7,7 +7,6 @@ trigger:
 
 pool:
   name: cebundy
-  demand: docker
 
 variables:
   imageName: 'pipelines-javascript-docker'
