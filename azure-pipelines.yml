@@ -6,8 +6,8 @@ trigger:
 - main
 
 pool:
-  name: default
-  demand: CB
+  name: cebundy
+  demand: docker
 
 variables:
   imageName: 'pipelines-javascript-docker'
@@ -18,4 +18,4 @@ steps:
    inputs:
      repository: $(imageName)
      command: build
-     Dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
+     Dockerfile: app/Dockerfile'
