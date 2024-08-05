@@ -5,9 +5,9 @@
 trigger:
 - main
 
-pool:
-  name: cebundy
-  demand: docker
+# pool:
+#   name: cebundy
+#   demand: docker
 
 variables:
   imageName: 'pipelines-javascript-docker'
