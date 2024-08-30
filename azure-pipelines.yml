@@ -21,14 +21,8 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
-      displayName: Build an image
-      inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
-        tags: |
-          $(tag)
-    - task: Docker@2
       inputs:
         containerRegistry: 'docker connection'
         repository: 'cebundy/pipelines-javascript-docker'
-        command: 'push' 
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
