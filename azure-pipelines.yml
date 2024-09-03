@@ -10,12 +10,12 @@
       vmImage: 'ubuntu-latest' 
     
     variables:
-      imageName: 'cebundy/pipelines-javascript-docker'
+      repositoryName: 'cebundy/pipelines-javascript-docker'
     
     steps:
     - task: Docker@2
       inputs:
         containerRegistry: 'docker connection'
-        repository: $(imageName)
+        repository: $(repositoryName)
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
