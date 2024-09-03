@@ -10,7 +10,7 @@
       vmImage: 'ubuntu-latest' 
     
     variables:
-      imageName: 'pipelines-javascript-docker'
+      imageName: 'cebundy/pipelines-javascript-docker'
     
     steps:
     - task: Docker@2
