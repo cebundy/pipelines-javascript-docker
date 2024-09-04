@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest' 
 
 variables:
-  repositoryName: 'gcr.io/bustling-nomad-434602-q3'
+  repositoryName: 'gcloud-docker-artifact'
 
 steps:
 - task: Docker@2
