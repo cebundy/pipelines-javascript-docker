@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest' 
 
 variables:
-  repositoryName: 'bustling-nomad-434602-q3/gcloud-docker-artifact'
+  repositoryName: 'sample-docker-image'
 
 steps:
 - task: Docker@2
