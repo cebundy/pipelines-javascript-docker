@@ -22,6 +22,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'gcrServiceConnection'
-    repository: 'bustling-nomad-434602-q3/sample-image'
+    repository: 'sample-image'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
