@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest' 
 
 variables:
-  repositoryName: 'sample-docker-image'
+  repositoryName: 'gcloud-docker-artifact/sample-docker-image'
 
 steps:
 - task: Docker@2
