@@ -9,13 +9,19 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest' 
 
-variables:
-  repositoryName: 'docker-image'
+# variables:
+#   repositoryName: 'docker-image'
 
 steps:
+# - task: Docker@2
+#   inputs:
+#     containerRegistry: 'gcrServiceConnection'
+#     repository: $(repositoryName)
+#     command: 'buildAndPush'
+#     Dockerfile: '**/Dockerfile'
 - task: Docker@2
   inputs:
     containerRegistry: 'gcrServiceConnection'
-    repository: $(repositoryName)
+    repository: 'gcloud-docker-artifact'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
