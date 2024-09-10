@@ -22,6 +22,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'gcrServiceConnection'
-    repository: 'my-pipeline-project-434800/sample-docker-image'
+    repository: 'bustling-nomad-434602-q3/gcloud-docker-artifact'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
