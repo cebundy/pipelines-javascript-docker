@@ -2,13 +2,11 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: cebundy
 
 variables:
   imageName: 'your-image-name'
   tag: '$(Build.BuildId)'
-
-steps:
 
 steps:
 - task: Docker@1
