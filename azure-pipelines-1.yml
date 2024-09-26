@@ -1,0 +1,38 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  imageName: 'your-image-name'
+  tag: '$(Build.BuildId)'
+
+steps:
+
+steps:
+- task: Docker@1
+  inputs:
+    azureSubscriptionEndpoint: 'azure resource manager jukullam'
+    azureContainerRegistry: 'cebundyacr.azurescr.io'
+    command: 'Build an image'
+    imageName: $(Build.Repository.Name):$(Build.BuildId)
+    dockerFile: '**/Dockerfile'
+    includeLatestTag: true
+    additionalImageTags: |
+      $(tag)
+    qualifyImageName: true
+    containerRegistryType: 'Azure Container Registry'
+
+- task: Docker@1
+  inputs:
+    azureSubscriptionEndpoint: 'azure resource manager jukullam'
+    azureContainerRegistry: 'cebundyacr.azurescr.io'
+    command: 'Push an image'
+    imageName: $(Build.Repository.Name):$(Build.BuildId)
+    dockerFile: '**/Dockerfile'
+    includeLatestTag: true
+    additionalImageTags: |
+      $(tag)
+    qualifyImageName: true
+    containerRegistryType: 'Azure Container Registry'
